@@ -10,6 +10,7 @@ const Router = {
 				//alternative to closure u can use event.target
 				//   const url1 = event.target.href;
 				const url = event.target.getAttribute("href");
+				console.log('url',url)
 				Router.go(url);
 			});
 		});
@@ -32,6 +33,7 @@ const Router = {
 		}
 		let pageElement = null;
 		switch (route) {
+			case "/index.html":
 			case "/":
 				pageElement = document.createElement("menu-page");
 				break;
